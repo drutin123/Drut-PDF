@@ -5,96 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Privacy Policy - Drut PDF</title>
     <style>
-        body {
-            font-family: system-ui, -apple-system, sans-serif;
-            line-height: 1.6;
-            color: #1e293b;
-            background-color: #f8fafc;
-            margin: 0;
-            padding: 24px 16px;
+        :root {
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-color: #334155;
+            --heading-color: #0f172a;
+            --accent-color: #2563eb;
+            --border-color: #e2e8f0;
+            --muted-text: #64748b;
+            --box-bg: #f1f5f9;
         }
+
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #0f172a;
+                --card-bg: #1e293b;
+                --text-color: #cbd5e1;
+                --heading-color: #f8fafc;
+                --accent-color: #3b82f6;
+                --border-color: #334155;
+                --muted-text: #94a3b8;
+                --box-bg: #0f172a;
+            }
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 32px 16px;
+        }
+
         .container {
             max-width: 800px;
             margin: 0 auto;
-            background: #ffffff;
-            padding: 32px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-            border: 1px solid #e2e8f0;
+            padding: 32px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
         }
-        h1 {
-            color: #0f172a;
-            margin-bottom: 6px;
-            font-size: 2rem;
-        }
-        .subtitle {
-            color: #64748b;
-            font-size: 0.95rem;
+
+        header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 20px;
             margin-bottom: 24px;
-            border-bottom: 1px solid #e2e8f0;
-            padding-bottom: 12px;
         }
-        h2 {
-            color: #2563eb;
-            font-size: 1.2em;
-            margin-top: 24px;
+
+        h1 {
+            color: var(--heading-color);
+            font-size: 1.8rem;
             margin-bottom: 8px;
         }
-        p, li {
-            color: #334155;
-            font-size: 0.95rem;
+
+        .last-updated {
+            color: var(--muted-text);
+            font-size: 0.875rem;
+            font-weight: 500;
         }
-        ul {
-            padding-left: 20px;
+
+        h2 {
+            color: var(--heading-color);
+            font-size: 1.2rem;
+            margin-top: 28px;
             margin-bottom: 12px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
         }
+
+        p {
+            margin-bottom: 14px;
+            font-size: 0.975rem;
+        }
+
+        ul {
+            margin-bottom: 14px;
+            padding-left: 24px;
+        }
+
         li {
             margin-bottom: 6px;
+            font-size: 0.975rem;
         }
-        code {
-            background: #f1f5f9;
-            padding: 2px 6px;
-            border-radius: 4px;
-            font-size: 0.88em;
-            color: #0f172a;
+
+        .highlight-box {
+            background-color: var(--box-bg);
+            border-radius: 8px;
+            padding: 16px;
+            margin: 16px 0;
+            border: 1px solid var(--border-color);
         }
+
         a {
-            color: #2563eb;
+            color: var(--accent-color);
             text-decoration: none;
         }
+
         a:hover {
             text-decoration: underline;
         }
-        .contact-box {
-            background: #eff6ff;
-            border: 1px solid #bfdbfe;
-            padding: 16px;
-            border-radius: 8px;
-            margin-top: 12px;
+
+        .contact-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: #ffffff !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 500;
+            margin-top: 8px;
+            text-decoration: none !important;
+        }
+
+        .contact-btn:hover {
+            opacity: 0.9;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Privacy Policy</h1>
-        <p class="subtitle"><strong>Drut PDF: 18-in-1 PDF Editor</strong> | Last updated: July 2026</p>
+        <div class="card">
+            <header>
+                <h1>Privacy Policy for Drut PDF</h1>
+                <p class="last-updated">Last updated: July 2026</p>
+            </header>
 
-        <h2>1. PDF Document Processing &amp; Data Storage</h2>
-        <p>Drut PDF operates locally on your device for all PDF reading, editing, merging, splitting, and processing tasks. Your documents, files, and personal contents are processed entirely on-device and are <strong>never</strong> transmitted to or stored on outside servers.</p>
+            <p>Your privacy is extremely important to us. <strong>Drut PDF</strong> is designed with a privacy-first approach, ensuring that all document processing occurs locally on your device.</p>
 
-        <h2>2. Local Application Data &amp; Controls</h2>
-        <p>All app settings, bookmarks, tool preferences, and encrypted PDF passwords are stored strictly inside your device's private application sandbox.</p>
-        <ul>
-            <li>This data remains exclusively on your device and is not accessible to us.</li>
-            <li><strong>Data Deletion:</strong> You can wipe all local application data at any time by navigating to <code>Settings &gt; Apps &gt; Drut PDF &gt; Storage &gt; Clear Data</code> on your device, or by uninstalling the application.</li>
-        </ul>
+            <h2>1. PDF Document Processing &amp; Data Security</h2>
+            <p>Drut PDF operates entirely locally on your device for all document operations, including reading, editing, merging, splitting, compressing, converting, locking, unlocking, and signing PDFs.</p>
+            <div class="highlight-box">
+                <p><strong>🔒 Complete On-Device Privacy:</strong> Your documents, files, images, and personal content are processed exclusively on your device. They are never uploaded, transmitted, or stored on any external servers or cloud infrastructure.</p>
+            </div>
 
-        <h2>3. Storage &amp; File Permissions</h2>
-        <p>Drut PDF requests file management or storage permissions solely to enable you to browse, open, modify, and save PDF files located on your storage drive. This permission is used strictly for user-requested document operations.</p>
+            <h2>2. Local Application Data &amp; User Controls</h2>
+            <p>All application settings, tool preferences, bookmarks, and encrypted passwords are kept strictly inside your device's private application sandbox.</p>
+            <ul>
+                <li>This data remains exclusively on your physical device and is never accessible to us.</li>
+                <li><strong>Data Deletion:</strong> You can clear all locally stored application data at any time by navigating to <code>Settings &gt; Apps &gt; Drut PDF &gt; Storage &gt; Clear Data</code> on your device, or simply by uninstalling the application.</li>
+            </ul>
 
-        <h2>4. Advertising &amp; Third-Party Services (Google AdMob)</h2>
-        <p>Drut PDF uses <strong>Google AdMob</strong> to serve advertisements within the application. To deliver ads, prevent fraud, and serve relevant content, Google AdMob may collect and process certain device information automatically.</p>
-        <p><strong>Information collected by Google AdMob includes:</strong></p>
+            <h2>3. Storage &amp; File Permissions</h2>
+            <p>Drut PDF requests storage or file access permissions solely to enable you to browse, open, edit, and save PDF files on your device. This permission is used strictly for executing user-requested document actions and never for background collection or tracking.</p>
+
+            <h2>4. Advertising &amp; Third-Party Services (Google AdMob)</h2>
+            <p>Drut PDF integrates Google AdMob to display advertisements within the app. To serve ads, prevent fraud, and deliver relevant content, Google AdMob may automatically collect and process certain non-personal device information.</p>
+            <p>Information collected by Google AdMob includes:</p>
+            <ul>
+                <li>Advertising Identifiers (e.g., Android AAID)</li>
+                <li>IP address and coarse/approximate location data</li>
+                <li>Device specifications (model, manufacturer, operating system version)</li>
+                <li>Ad interactions, performance metrics, and diagnostic logs</li>
+            </ul>
+            <p>For detailed information on how Google manages user data, please review the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy &amp; Terms Policy</a>.</p>
+            
+            <div class="highlight-box">
+                <p><strong>Opting Out of Personalized Ads:</strong> You can manage or opt out of personalized interest-based advertising on your Android device by going to <code>Settings &gt; Google &gt; Ads &gt; Delete Advertising ID</code> or <code>Opt out of Ads Personalization</code>.</p>
+            </div>
+
+            <h2>5. Children's Privacy (COPPA Compliance)</h2>
+            <p>Drut PDF does not knowingly direct advertisements to or collect personal information from children under the age of 13 (or 16 in the EU/UK). If you believe a child has provided personal information through our advertising partner, please contact us immediately so we can take appropriate remedial steps.</p>
+
+            <h2>6. Changes to This Privacy Policy</h2>
+            <p>We may update our Privacy Policy from time to time to reflect changes in app features or store compliance requirements. Any updates will be posted directly on this page with a revised "Last updated" date.</p>
+
+            <h2>7. Contact Us</h2>
+            <p>If you have any questions or feedback regarding this Privacy Policy or app permissions, feel free to reach out to us:</p>
+            <p>
+                <a href="mailto:support.drutin@gmail.com" class="contact-btn">Email Support: support.drutin@gmail.com</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
         <ul>
             <li>Advertising ID (e.g., Android AAID)</li>
             <li>IP address and approximate coarse location</li>
